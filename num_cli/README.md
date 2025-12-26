@@ -12,10 +12,6 @@ This is the **Console (CLI) version** of the Number Guessing Game.
 
 ## How to Run
 1. Open a terminal in this folder (`num_cli/`)
-2. Run the game:
-
-```bash
-python cli.py
-
+2. Run the game
 3. Follow the instructions in the console
 4.Enter your guesses and try to find the correct number!

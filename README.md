@@ -46,9 +46,12 @@ Play with a graphical interface using **Tkinter**.
 
 See GUI README for details
 
-📌 Notes:
-   -Requires Python 3.x
-   -No external libraries needed (Tkinter is pre-installed with Python)
-   -Enjoy guessing the numbers! 🎯
+## 📌 Notes
+
+- Requires **Python 3.x**
+- No external libraries needed (**Tkinter** is pre-installed with Python)
+- Enjoy guessing the numbers! 🎯
+
+
 
 

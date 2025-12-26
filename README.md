@@ -6,16 +6,16 @@ This repository contains two versions of the **Number Guessing Game** in Python:
 2. **GUI Version** – play with a graphical interface using Tkinter  
 
 
-## 📂 Folder Structure
+# Folder Structure
 
-number-guessing/
-├─ num_cli/ # Console version
-│ ├─ cli.py
-│ └─ README.md
-├─ num_gui/ # Graphical version
-│ ├─ gui.py
-│ └─ README.md
-└─ README.md # This is main readme file
+- number-guessing/
+  - num_cli/
+    - cli.py
+    - README.md
+  - num_gui/
+    - gui.py
+    - README.md
+  - README.md
 
 
 ## 🖥 CLI Version
@@ -44,3 +44,4 @@ See GUI README for details
    -Requires Python 3.x
    -No external libraries needed (Tkinter is pre-installed with Python)
    -Enjoy guessing the numbers! 🎯
+

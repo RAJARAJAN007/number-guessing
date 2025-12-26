@@ -20,23 +20,29 @@ This repository contains two versions of the **Number Guessing Game** in Python:
 
 ## 🖥 CLI Version
 
-- Play directly in the terminal  
-- Features:
-  - 3 difficulty levels: Easy (1–10), Medium (1–50), Hard (1–100)  
-  - Exception handling for invalid inputs  
-  - Tracks number of attempts 
+Play directly in the terminal.
+
+### Features
+- 3 difficulty levels: Easy (1–10), Medium (1–50), Hard (1–100)
+- Exception handling for invalid inputs
+- Tracks number of attempts
 
 See CLI README for details
 
-## 🎨 GUI Version
--Play with a graphical interface using Tkinter
 
--Features:
-  -Select difficulty level with buttons
-  -Real-time feedback: Too high 📈, Too low 📉, Correct 🎉
-  -Automatically shows congratulations message
-  -Automatically restarts the game after correct guess
-  -Tracks number of attempts
+## 🎨 GUI Version
+
+Play with a graphical interface using **Tkinter**.
+
+### Features
+- Select difficulty level with buttons
+- Real-time feedback:
+  - Too high 📈
+  - Too low 📉
+  - Correct 🎉
+- Automatically shows congratulations message
+- Automatically restarts the game after correct guess
+- Tracks number of attempts
 
 See GUI README for details
 
@@ -44,4 +50,5 @@ See GUI README for details
    -Requires Python 3.x
    -No external libraries needed (Tkinter is pre-installed with Python)
    -Enjoy guessing the numbers! 🎯
+
 

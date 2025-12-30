@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guessing Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+<div class="game-container">
+
+    <!-- MAIN MENU -->
+    <div id="menu">
+        <h1>Number Guessing Game</h1>
+        <button class="main-btn" onclick="goToLevel()">Play</button>
+        <button class="main-btn exit" onclick="exitGame()">Exit</button>
+    </div>
+
+    <!-- LEVEL SELECTION -->
+    <div id="level" class="hidden">
+        <h3>Choose level to start game</h3>
+        <div class="level-buttons">
+            <button onclick="startGame(10)">Easy</button>
+            <button onclick="startGame(50)">Medium</button>
+            <button onclick="startGame(100)">Hard</button>
+        </div>
+
+        <button class="secondary-btn" onclick="backToMenu()">Back to Menu</button>
+    </div>
+
+    <!-- GUESS SECTION -->
+    <div id="guess" class="hidden">
+        <h3>Enter your guess</h3>
+        <input type="number" id="userGuess" placeholder="Enter number">
+        <button class="submit-btn" onclick="checkGuess()">Submit</button>
+
+        <p class="message" id="message"></p>
+        <p class="attempts">Attempts: <span id="attempts">0</span></p>
+
+        <button class="secondary-btn" onclick="restartGame()">Restart</button>
+        <button class="secondary-btn exit" onclick="exitGame()">Exit</button>
+    </div>
+
+</div>
+
+<script>
+let secretNumber = 0;
+let attempts = 0;
+let maxRange = 0;
+
+function goToLevel() {
+    document.getElementById("menu").classList.add("hidden");
+    document.getElementById("level").classList.remove("hidden");
+}
+
+function startGame(range) {
+    maxRange = range;
+    secretNumber = Math.floor(Math.random() * range) + 1;
+    attempts = 0;
+
+    document.getElementById("attempts").innerText = attempts;
+    document.getElementById("message").innerText = "";
+    document.getElementById("userGuess").value = "";
+
+    document.getElementById("level").classList.add("hidden");
+    document.getElementById("guess").classList.remove("hidden");
+}
+
+function checkGuess() {
+    const guess = Number(document.getElementById("userGuess").value);
+    if (!guess) return;
+
+    attempts++;
+    document.getElementById("attempts").innerText = attempts;
+
+    if (guess > secretNumber) {
+        document.getElementById("message").innerText = "📈 Too High!";
+    } else if (guess < secretNumber) {
+        document.getElementById("message").innerText = "📉 Too Low!";
+    } else {
+        document.getElementById("message").innerText =
+            `🎉 Correct! Number was ${secretNumber}`;
+    }
+}
+
+function restartGame() {
+    document.getElementById("guess").classList.add("hidden");
+    document.getElementById("level").classList.remove("hidden");
+}
+
+function backToMenu() {
+    document.getElementById("level").classList.add("hidden");
+    document.getElementById("menu").classList.remove("hidden");
+}
+
+function exitGame() {
+    alert("Thanks for playing 👋");
+    window.close();
+}
+</script>
+
+</body>
+</html>

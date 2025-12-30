@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full background */
+body {
+    font-family: 'Press Start 2P', cursive;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("./images/num.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* Bigger transparent violet game box */
+.game-container {
+    width: 480px;
+    padding: 42px;
+    border-radius: 22px;
+    text-align: center;
+
+    background: rgba(190, 160, 255, 0.45);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* ALL TEXT WHITE */
+h1,
+h3,
+p,
+span {
+    color: #ffffff;
+}
+
+/* Force funky font everywhere */
+button,
+input {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+}
+
+/* Main title */
+h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Section headings */
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+/* ALL BUTTONS BLACK */
+.main-btn,
+.secondary-btn,
+.submit-btn,
+.level-buttons button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 16px;
+
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    cursor: pointer;
+
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Level buttons layout */
+.level-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.level-buttons button {
+    width: 130px;
+}
+
+/* Input field */
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+
+    border-radius: 12px;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+}
+
+/* Placeholder text */
+input::placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+    font-size: 12px;
+}
+
+/* Messages */
+.message {
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.attempts {
+    margin-top: 14px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Hide sections */
+.hidden {
+    display: none;
+}
